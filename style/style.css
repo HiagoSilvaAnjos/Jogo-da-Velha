@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
 * {
     border: 0;
@@ -20,9 +21,14 @@ body {
     background-color: #172c3c;
 }
 
+.main-container {
+    width: 50rem;
+    height: auto;
+}
+
 .title-container {
     margin: 0 auto;
-    width: 50rem;
+    width: 100%;
     padding: 4rem;
     text-align: center;
 }
@@ -40,12 +46,20 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
     gap: 1.5rem;
-    width: 50rem;
-    height: 50rem;
+    width: 100%;
 }
 
 .home-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 15.5rem;
+    height: 15.5rem;
+
     border: 0.2rem solid #faf8ed;
     border-radius: 0.2rem;
     background-color: #f6f1de;
@@ -54,4 +68,20 @@ body {
 .home-stage:hover {
     opacity: 0.70;
     cursor: pointer;
+}
+
+/* Jogadores X ou O */
+
+.O::after {
+    content: "🟡";
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10rem;
+}
+
+.X::after {
+    content: "❌";
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10rem;
 }
