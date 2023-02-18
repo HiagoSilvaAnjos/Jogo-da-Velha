@@ -19,7 +19,11 @@ function handleClick(event) {
 function runGame(poaitionArgument) {
 
     if (handleMove(poaitionArgument)) {
-        alert('O jogo o acabou!')
+        setTimeout(() => {
+            alert('O jogo o acabou!');
+            location.reload();
+        }, 50)
+       
     }
 
     handleMove(poaitionArgument);
