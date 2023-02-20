@@ -1,8 +1,18 @@
 const board = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0; // 1
-let symbols = ["o", "x"];
-
+let symbols = ["O", "X"];
 let gameOver = false;
+let isWinStades = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [6, 4, 2]
+];
+
 
 // mudar jogador
 function handleMove(squarePosition) {
@@ -20,12 +30,7 @@ function handleMove(squarePosition) {
         gameOver = isWin();
 
         if (gameOver == false) {
-
-            if (playerTime == 0) {
-                playerTime = 1;
-            } else {
-                playerTime = 0;
-            }
+            playerTime = playerTime == 0 ? 1 : 0
         }
 
     }
@@ -34,17 +39,6 @@ function handleMove(squarePosition) {
 }
 
 function isWin() {
-
-    let isWinStades = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [6, 4, 2]
-    ];
 
     for (let i = 0; i < isWinStades.length; i++) {
         let sequence = isWinStades[i];

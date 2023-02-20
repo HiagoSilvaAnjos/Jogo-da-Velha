@@ -72,14 +72,14 @@ body {
 
 /* Jogadores X ou O */
 
-.o::after {
+.O::after {
     content: "🟡";
     font-weight: 200;
     font-family: 'Source Code Pro', monospace;
     font-size: 10rem;
 }
 
-.x::after {
+.X::after {
     content: "❌";
     font-weight: 200;
     font-family: 'Source Code Pro', monospace;

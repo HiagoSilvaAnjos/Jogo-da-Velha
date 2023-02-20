@@ -16,34 +16,42 @@ function handleClick(event) {
     runGame(squarePosition);
 }
 
-function runGame(poaitionArgument) {
+function runGame(positionArgument) {
 
-    if (handleMove(poaitionArgument)) {
+    if (handleMove(positionArgument)) {
         setTimeout(() => {
-            alert('O jogo o acabou!');
+            alert(`O jogo o acabou! o vencedor foi o jogador ${symbols[playerTime]}`);
             location.reload();
         }, 50)
-       
+
     }
 
-    handleMove(poaitionArgument);
-    updateSquares();
+    handleMove(positionArgument);
+    updateSquare(positionArgument);
 
 }
 
-// checar e atualizar os quadrados com os simbolos
-function updateSquares() {
+// atualizar os quadrados com os simbolos
+function updateSquare(position) {
 
-    let boardSquare = document.documentElement.querySelectorAll('.home-stage');
-
-    boardSquare.forEach(function (square) {
-
-        let elementDivPosition = square.id;
-        let symbol = board[elementDivPosition];
-
-        if (symbol != "") {
-            square.innerHTML = `<div class="${symbol}"></div>`
-        }
-
-    })
+    let boardSquare  = document.getElementById(position.toString());
+    let symbol = board[position];
+ 
+    boardSquare.innerHTML = `<div class="${symbol}"></div>`;
+  
 }
+
+// function updateSquare() {
+
+//     let boardSquare = document.documentElement.querySelectorAll('.home-stage');
+//     boardSquare.forEach(function (square) {
+
+//         let elementDivPosition = square.id;
+//         let symbol = board[elementDivPosition];
+
+//         if (symbol != "") {
+//             square.innerHTML = `<div class="${symbol}"></div>`
+//         }
+
+//     })
+// }
