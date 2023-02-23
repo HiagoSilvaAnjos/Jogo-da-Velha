@@ -17,13 +17,13 @@ let isWinStades = [
 // mudar jogador
 function handleMove(squarePosition) {
 
-    // const checkedMove = board[squarePosition] == '';
+    const checkedMove = board[squarePosition] == '';
 
     if (gameOver) {
         return;
     }
 
-    if (board[squarePosition] == '') {
+    if (checkedMove) {
 
         board[squarePosition] = symbols[playerTime];
 

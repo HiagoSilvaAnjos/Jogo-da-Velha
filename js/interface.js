@@ -40,18 +40,3 @@ function updateSquare(position) {
     boardSquare.innerHTML = `<div class="${symbol}"></div>`;
   
 }
-
-// function updateSquare() {
-
-//     let boardSquare = document.documentElement.querySelectorAll('.home-stage');
-//     boardSquare.forEach(function (square) {
-
-//         let elementDivPosition = square.id;
-//         let symbol = board[elementDivPosition];
-
-//         if (symbol != "") {
-//             square.innerHTML = `<div class="${symbol}"></div>`
-//         }
-
-//     })
-// }
