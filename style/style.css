@@ -74,14 +74,12 @@ body {
 
 .O::after {
   content: "🟡";
-  font-weight: 200;
   font-family: "Source Code Pro", monospace;
   font-size: 10rem;
 }
 
 .X::after {
   content: "❌";
-  font-weight: 200;
   font-family: "Source Code Pro", monospace;
   font-size: 10rem;
 }
@@ -97,7 +95,20 @@ body {
   }
 
   .home-stage {
+    max-width: 14rem;
     height: 14rem;
+  }
+
+  .O::after {
+    content: "🟡";
+    font-family: "Source Code Pro", monospace;
+    font-size: 7rem;
+  }
+  
+  .X::after {
+    content: "❌";
+    font-family: "Source Code Pro", monospace;
+    font-size: 7rem;
   }
 }
 
@@ -111,7 +122,20 @@ body {
     }
   
     .home-stage {
-      height: 11rem;
+      max-width: 13rem;
+      height: 13rem;
+    }
+
+    .O::after {
+      content: "🟡";
+      font-family: "Source Code Pro", monospace;
+      font-size: 5rem;
+    }
+    
+    .X::after {
+      content: "❌";
+      font-family: "Source Code Pro", monospace;
+      font-size: 5rem;
     }
   }
   
